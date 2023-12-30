@@ -2,7 +2,7 @@
 
 Flutter House selling app without using any animation package.
 
-In this project, I only use [Getx](https://pub.dev/packages/get) as Statemanager and navigate controller.
+In this project, I only use [Getx](https://pub.dev/packages/get) as Statemanager and Navigattion controller.
 
 
 
