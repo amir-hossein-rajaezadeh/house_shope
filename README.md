@@ -1,16 +1,17 @@
-# house_selling
+# house_shope
 
-A new Flutter project.
+Flutter House selling app without using any animation package.
+In this project, I only use [Getx](https://pub.dev/packages/get) as Statemanager and navigate controller.
+.
+.
+.
+The Design of the project is a dribble shot with a little bit of change that I have done.
+Design Link: https://dribbble.com/shots/23177080-Hostel-Finder-Mobile-iOS-App
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Images:
+![Main Page](doc/images/image1.png) 
+![House Detail Page](doc/images/image2.png) 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
