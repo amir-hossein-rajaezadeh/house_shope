@@ -16,7 +16,7 @@ Open to any contributes
 Open to any request
 
 ## Please Star it if you find it useful
-Thanks in  Advance  
+## Thanks in  Advance  
 
 ## Images:
 ![Main Page](doc/images/image1.png) 
