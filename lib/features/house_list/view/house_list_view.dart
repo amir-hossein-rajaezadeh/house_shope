@@ -60,7 +60,7 @@ class HouseListViewPage extends GetView<HouseDetailController> {
   Container _buildTypeListWidget() {
     return Container(
       margin: const EdgeInsets.only(top: 20),
-      height: 40.h,
+      height: 42.h,
       child: SlideTransition(
         position: controller.typeListViewOffsetAnimation,
         child: ListView.separated(
@@ -71,7 +71,9 @@ class HouseListViewPage extends GetView<HouseDetailController> {
                 margin: EdgeInsets.only(left: index == 0 ? 20 : 0),
                 height: 40.h,
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.grey),
+                  color: index == 1 ? MyColors.pink : Colors.transparent,
+                  border: Border.all(
+                      color: index == 1 ? MyColors.pink : Colors.grey),
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: Padding(
@@ -79,7 +81,9 @@ class HouseListViewPage extends GetView<HouseDetailController> {
                   child: Center(
                     child: Text(
                       item,
-                      style: const TextStyle(color: Colors.black, fontSize: 18),
+                      style: TextStyle(
+                          color: index == 1 ? Colors.white : Colors.black,
+                          fontSize: 18),
                       textAlign: TextAlign.center,
                     ),
                   ),
