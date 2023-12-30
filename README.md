@@ -1,4 +1,4 @@
-# house_shope
+# House Shope
 
 Flutter House selling app without using any animation package.
 In this project, I only use [Getx](https://pub.dev/packages/get) as Statemanager and navigate controller.
@@ -6,8 +6,8 @@ In this project, I only use [Getx](https://pub.dev/packages/get) as Statemanager
 .
 .
 The Design of the project is a dribble shot with a little bit of change that I have done.
-Design Link: https://dribbble.com/shots/23177080-Hostel-Finder-Mobile-iOS-App
 
+Design Link: https://dribbble.com/shots/23177080-Hostel-Finder-Mobile-iOS-App
 
 
 
