@@ -5,19 +5,19 @@ import 'package:get/get.dart';
 import 'package:house_selling/data/house_list.dart';
 import 'package:house_selling/data/model/house_item.dart';
 import 'package:house_selling/features/house_detail/controller/house_detail_controller.dart';
+import 'package:house_selling/features/house_list/controller/house_list_controller.dart';
 import 'package:house_selling/router.dart';
 import 'package:house_selling/utils/my_colors.dart';
 import 'package:house_selling/utils/my_strings.dart';
 import 'dart:math' as math;
 
-class HouseListViewPage extends GetView<HouseDetailController> {
-  const HouseListViewPage({super.key});
+class HouseListPage extends GetView<HouseListController> {
+  const HouseListPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Get.lazyPut(
-      () => HouseDetailController(),
-    );
+    Get.find<HouseListController>();
+
     controller.rotationController.forward();
     controller.typeListViewController.forward();
 

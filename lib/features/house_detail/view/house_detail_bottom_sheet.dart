@@ -73,11 +73,10 @@ class HouseDetailBottomSheet {
               ),
             )
           ]);
-        }).whenComplete(() {
+        }).whenComplete(() async {
       //                            -----<<<<TODO>>>>----
       //                    When BackButton pressed in HouseDetail Page.
-      controller.callIconHeight = 0.0;
-      Get.delete<HouseDetailController>();
+      Get.back();
       Get.back();
     });
   }

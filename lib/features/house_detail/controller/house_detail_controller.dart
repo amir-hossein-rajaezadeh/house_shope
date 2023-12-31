@@ -6,32 +6,6 @@ class HouseDetailController extends GetxController
     with GetTickerProviderStateMixin {
   //                            -----<<<<TODO>>>>----
   //                        Init Animations and variables
-
-  List<String> listviewItems = ['All', 'House', 'Apartment', 'Town'];
-
-  late final AnimationController typeListViewController = AnimationController(
-    duration: const Duration(seconds: 1),
-    vsync: this,
-  );
-  late final Animation<Offset> typeListViewOffsetAnimation = Tween<Offset>(
-    begin: const Offset(1.5, 0.0),
-    end: Offset.zero,
-  ).animate(typeListViewController);
-
-  late final Animation<Offset> addButtonOffsetAnimation = Tween<Offset>(
-    begin: const Offset(1.5, 0.0),
-    end: Offset.zero,
-  ).animate(typeListViewController);
-
-  late final AnimationController rotationController = AnimationController(
-      vsync: this, duration: const Duration(milliseconds: 1100));
-
-  late final AnimationController textFadeController = AnimationController(
-      duration: const Duration(milliseconds: 1000), vsync: this);
-
-  late final Animation<double> textFadeAnimation =
-      CurvedAnimation(parent: textFadeController, curve: Curves.easeIn);
-
   double resizeHeight = 12.0;
   late AnimationController controller;
 
@@ -114,8 +88,8 @@ class HouseDetailController extends GetxController
   }
 
   void initHouseDetail() async {
-    //                                     -----<<<<TODO>>>>----
-    //    start Animations
+    //                                     -------<<<<TODO>>>>------
+    //                                          Start Animations
     await Future.delayed(
       const Duration(milliseconds: 300),
     );
@@ -142,10 +116,11 @@ class HouseDetailController extends GetxController
     }
   }
 
-  void buyNowButton() {
-    //                                     -----<<<<TODO>>>>----
-    //When Buy Now button pressed this function called
-  }
+  //                                     -----<<<<TODO>>>>----
+  //                          When Buy Now button pressed this function called
+  void buyNowButton() {}
+
+  void initHouseListPage() async {}
 
   @override
   void onInit() async {
