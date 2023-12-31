@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:house_selling/data/house_list.dart';
 
 class HouseDetailController extends GetxController
     with GetTickerProviderStateMixin {
   //                            -----<<<<TODO>>>>----
-  //                        Init Animations and variables
-  double resizeHeight = 12.0;
+  //                         Init Animations and variables
   late AnimationController controller;
 
   late final AnimationController insideHouseImageListViewController =
@@ -80,16 +78,9 @@ class HouseDetailController extends GetxController
 
   double callIconHeight = 0.0;
 
-  void likeHouse(int selectedHomeIndex) {
-    bool selectedHouseItem = HouseList().houseList[selectedHomeIndex].isLiked;
-    selectedHouseItem ? selectedHouseItem = false : selectedHouseItem = true;
-    HouseList().houseList[selectedHomeIndex].isLiked;
-    update();
-  }
-
+  //                         -------<<<<TODO>>>>------
+  //                               Start Animations
   void initHouseDetail() async {
-    //                                     -------<<<<TODO>>>>------
-    //                                          Start Animations
     await Future.delayed(
       const Duration(milliseconds: 300),
     );
@@ -120,19 +111,15 @@ class HouseDetailController extends GetxController
   //                          When Buy Now button pressed this function called
   void buyNowButton() {}
 
-  void initHouseListPage() async {}
-
+  //                                     -----<<<<TODO>>>>----
+  // When HouseListPage created this onInitFun called but in the HouseDetailPage initHouseDetail function called.
   @override
   void onInit() async {
-    //                                     -----<<<<TODO>>>>----
-    // When HouseListPage created this onInitFun called but in the HouseDetailPage initHouseDetail function called.
     controller = BottomSheet.createAnimationController(this);
     controller.duration = const Duration(milliseconds: 800);
     await Future.delayed(
       const Duration(milliseconds: 1100),
     );
-    resizeHeight = 200.0;
-    update();
     super.onInit();
   }
 }

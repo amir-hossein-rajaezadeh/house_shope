@@ -7,7 +7,7 @@ class AppRoutes {
   static List<GetPage> get pages => [
         GetPage(
             name: houseDetail,
-            page: () => HouseDetailView(),
+            page: () => HouseDetailPage(),
             transition: Transition.fadeIn),
       ];
 }

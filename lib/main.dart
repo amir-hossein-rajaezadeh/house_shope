@@ -9,12 +9,6 @@ import 'package:house_selling/router.dart';
 import 'features/house_list/controller/house_list_controller.dart';
 
 void main() {
-  Get.lazyPut(
-    () => HouseListController(),
-  );
-  Get.lazyPut(
-    () => HouseDetailController(),
-  );
   runApp(const MyApp());
 }
 

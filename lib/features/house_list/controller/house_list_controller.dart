@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 class HouseListController extends GetxController
     with GetTickerProviderStateMixin {
+  double resizeHeight = 12.0;
   //                            -----<<<<TODO>>>>----
   //                        Init Animations and variables
   List<String> listviewItems = ['All', 'House', 'Apartment', 'Town'];
@@ -29,4 +30,11 @@ class HouseListController extends GetxController
 
   late final Animation<double> textFadeAnimation =
       CurvedAnimation(parent: textFadeController, curve: Curves.easeIn);
+
+  @override
+  void onInit() async {
+    resizeHeight = 200.0;
+    update();
+    super.onInit();
+  }
 }
