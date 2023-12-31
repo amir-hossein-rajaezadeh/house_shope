@@ -33,8 +33,13 @@ class HouseListController extends GetxController
 
   @override
   void onInit() async {
-    resizeHeight = 200.0;
-    update();
+    {
+      await Future.delayed(
+        const Duration(milliseconds: 1800),
+      ).then((value) => resizeHeight = 200.0);
+      update();
+    }
+
     super.onInit();
   }
 }

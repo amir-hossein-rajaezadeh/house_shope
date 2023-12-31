@@ -2,11 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:house_selling/features/house_detail/controller/house_detail_controller.dart';
 import 'package:house_selling/features/house_list/view/house_list_page.dart';
 import 'package:house_selling/router.dart';
-
-import 'features/house_list/controller/house_list_controller.dart';
 
 void main() {
   runApp(const MyApp());
