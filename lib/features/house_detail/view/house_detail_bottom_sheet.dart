@@ -74,10 +74,11 @@ class HouseDetailBottomSheet {
             )
           ]);
         }).whenComplete(() async {
-      //                            -----<<<<TODO>>>>----
-      //                    When BackButton pressed in HouseDetail Page.
+      //                                  -----<<<<TODO>>>>----
+      //  When BackButton pressed in HouseDetail Page First close the bottom sheet  and then  go back to pervious page.
       Get.back();
       Get.back();
+      Get.delete<HouseDetailController>();
     });
   }
 

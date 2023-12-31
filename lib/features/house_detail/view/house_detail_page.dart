@@ -7,13 +7,16 @@ import 'package:house_selling/features/house_detail/controller/house_detail_cont
 import 'package:house_selling/features/house_detail/view/house_detail_bottom_sheet.dart';
 import 'package:house_selling/utils/my_colors.dart';
 
-class HouseDetailView extends GetView<HouseDetailController> {
-  HouseDetailView({super.key});
+class HouseDetailPage extends GetView<HouseDetailController> {
+  HouseDetailPage({super.key});
 
   final HouseItem houseItemArgument = HouseList().houseList[Get.arguments];
 
   @override
   Widget build(BuildContext context) {
+    Get.lazyPut(
+      () => HouseDetailController(),
+    );
     controller.initHouseDetail();
     Future.microtask(
       () => HouseDetailBottomSheet()
@@ -30,19 +33,16 @@ class HouseDetailView extends GetView<HouseDetailController> {
           GetBuilder<HouseDetailController>(
             builder: (controller) => Positioned(
               right: 0,
-              child: InkWell(
-                onTap: () => controller.likeHouse(Get.arguments),
-                child: Container(
-                  margin: const EdgeInsets.only(top: 60, right: 20),
-                  width: 47,
-                  height: 47,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      color: MyColors.white),
-                  child: const Icon(
-                    CupertinoIcons.heart,
-                    size: 26,
-                  ),
+              child: Container(
+                margin: const EdgeInsets.only(top: 60, right: 20),
+                width: 47,
+                height: 47,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: MyColors.white),
+                child: const Icon(
+                  CupertinoIcons.heart,
+                  size: 26,
                 ),
               ),
             ),

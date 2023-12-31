@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:house_selling/data/house_list.dart';
 import 'package:house_selling/data/model/house_item.dart';
-import 'package:house_selling/features/house_detail/controller/house_detail_controller.dart';
 import 'package:house_selling/features/house_list/controller/house_list_controller.dart';
 import 'package:house_selling/router.dart';
 import 'package:house_selling/utils/my_colors.dart';
@@ -16,11 +15,11 @@ class HouseListPage extends GetView<HouseListController> {
 
   @override
   Widget build(BuildContext context) {
-    Get.find<HouseListController>();
-
+    Get.lazyPut(
+      () => HouseListController(),
+    );
     controller.rotationController.forward();
     controller.typeListViewController.forward();
-
     controller.textFadeController.forward();
     return SafeArea(
       child: Scaffold(
@@ -125,14 +124,11 @@ class HouseListPage extends GetView<HouseListController> {
       ),
       child: InkWell(
         onTap: () {
-          Get.lazyPut(
-            () => HouseDetailController(),
-          );
           Get.toNamed(AppRoutes.houseDetail, arguments: index);
         },
         child: Column(
           children: [
-            GetBuilder<HouseDetailController>(
+            GetBuilder<HouseListController>(
               builder: (controller) => AnimatedContainer(
                 curve: Curves.easeInQuint,
                 height: controller.resizeHeight,
